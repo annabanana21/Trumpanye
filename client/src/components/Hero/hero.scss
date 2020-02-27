@@ -9,6 +9,7 @@
     height: fit-content;
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
 
     &__image {
         display: inline-block;
@@ -17,27 +18,34 @@
         background-size: cover;
         width: 700px;
         height: 600px;
+        position: relative;
     }
 
     &__container {
         display: flex;
         flex-wrap: wrap;
+        justify-content: flex-end;
         background: none;
-        width: 310px;
+        width: 465px;
+        position: absolute;
+        left: -130px;
+        margin-top: 50px;
     }
 
     &__yell {
         font-family: 'Badaboom';
-        font-size: 4rem;
-        color: white;
+        font-size: 6rem;
+        color: #271910;
         display: inline-block;
         background: none;
-        margin-bottom: 0;
+        margin: 0;
     }
 
     &__softer {
         @extend .hero__yell;
         font-size: 3rem;
         margin: 0;
+        color: white;
+        margin-right: 4rem;
     }
 }
