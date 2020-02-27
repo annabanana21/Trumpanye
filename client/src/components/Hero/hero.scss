@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Badaboom';
+    src: url('../../assets/fonts/BADABB__.TTF');
+}
+
+
+.hero {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+
+    &__image {
+        display: inline-block;
+        background: url('../../assets/trump_yelling.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 700px;
+        height: 600px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        width: 310px;
+    }
+
+    &__yell {
+        font-family: 'Badaboom';
+        font-size: 4rem;
+        color: white;
+        display: inline-block;
+        background: none;
+        margin-bottom: 0;
+    }
+
+    &__softer {
+        @extend .hero__yell;
+        font-size: 3rem;
+        margin: 0;
+    }
+}
