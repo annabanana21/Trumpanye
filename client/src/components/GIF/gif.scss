@@ -1,0 +1,14 @@
+.gif-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 100px;
+
+    &__container {
+        width: 500px;
+        height: 300px;
+        background-color: red;
+    }
+}
