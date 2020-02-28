@@ -1,9 +1,7 @@
-import axios from 'axios';
 import React from 'react';
 import './quote.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
-import chat from '../../assets/chatting.svg';
+import trump from '../../assets/talking-real.png';
+
 
 function Quote() {
     return (
@@ -14,6 +12,7 @@ function Quote() {
                 </div>
                 <div className='display__triangle'></div>
             </div>
+            <img src={trump} className='display__trump'/>
         </section>
     )
 }

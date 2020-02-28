@@ -1,7 +1,10 @@
 .display {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 2rem 0;
+    padding-top: 3rem;
+    flex-direction: column;
 
     &__bubble {
         width: fit-content;
@@ -29,6 +32,12 @@
         border-right: 20px solid transparent;
         
         border-top: 60px solid white;
+        align-self: flex-end;
+    }
+
+    &__trump {
+        transform: scaleX(-1);
+        height: 300px;
         align-self: flex-end;
     }
 }
