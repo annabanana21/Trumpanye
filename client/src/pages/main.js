@@ -9,9 +9,9 @@ class MainPage extends React.Component {
     render() {
         return (
             <main className='main'>
-                <audio className='main__audio' ref='audio_tag' src={soundfile} controls autoPlay/>
                 <Hero />
                 <UserForm />
+                <audio className='main__audio' ref='audio_tag' src={soundfile} controls autoPlay/>
             </main>
         )
 
