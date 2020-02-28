@@ -1,3 +1,7 @@
 .main {
     background-color: #D5274C;
+
+    &__audio {
+        visibility: hidden;
+    }
 }

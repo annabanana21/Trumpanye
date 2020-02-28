@@ -1,9 +1,19 @@
 import React from 'react';
 import './quote.scss';
 import trump from '../../assets/talking-real.png';
+import audio from '../../assets/sounds/trump-Disgrace.wav';
 
 
 function Quote(props) {
+
+    const playSound = () => {
+        var audio = document.getElementById("audio");
+        if (audio) {
+            audio.play();
+        }
+    }
+
+
     return (
         <section className='display'>
             <div className='display__bubble'>
@@ -12,7 +22,8 @@ function Quote(props) {
                 </div>
                 <div className='display__triangle'></div>
             </div>
-            <img src={trump} className='display__trump'/>
+            <img src={trump} className='display__trump' onClick={playSound}/>
+            <audio id="audio" src={audio}></audio>
         </section>
     )
 }

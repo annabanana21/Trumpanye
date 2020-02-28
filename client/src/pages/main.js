@@ -1,16 +1,21 @@
-import axios from 'axios';
 import React from 'react';
 import Hero from '../components/Hero/hero'
 import UserForm from '../components/UserForm/userform';
 import './main.scss';
+import soundfile from '../assets/anthem.mp3'
 
-function MainPage() {
-    return (
-        <main className='main'>
-            <Hero />
-            <UserForm />
-        </main>
-    )
+
+class MainPage extends React.Component {
+    render() {
+        return (
+            <main className='main'>
+                <audio className='main__audio' ref='audio_tag' src={soundfile} controls autoPlay/>
+                <Hero />
+                <UserForm />
+            </main>
+        )
+
+    }
 }
 
 

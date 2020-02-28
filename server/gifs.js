@@ -12,6 +12,4 @@ module.exports = [
     "https://i.imgur.com/5eVLKvo.gif",
     "https://i.imgur.com/KraPDff.gif",
     "https://i.imgur.com/6ezlyWB.gif"
-
-
 ]

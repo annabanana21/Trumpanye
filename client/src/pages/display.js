@@ -11,11 +11,12 @@ class Display extends React.Component {
     state = {
         name: '',
         newRequest: false,
-        diss: ''
-
+        diss: '',
+        gif: ''
     }
 
     componentDidMount() {
+
         let unformatted = this.props.location.search;
         let index = unformatted.indexOf('=');
         let formatted = unformatted.slice(index+1);
@@ -26,24 +27,21 @@ class Display extends React.Component {
                 axios.get('http://localhost:5000/')
             ]
         ).then(resultsArray => {
-            console.log(resultsArray)
+            let message = resultsArray[0].data.message;
+            let gif = resultsArray[1].data;
+            this.setState({
+                name: formatted,
+                diss: message,
+                gif: gif
+            })
+
         })
-
-
-        /*axios.get(this.api+formatted).then(res => {
-            this.setState(
-                {
-                    name: formatted,
-                    diss: res.data.message
-                }
-            )
-        })*/
     }
 
     render() {
         return (
             <main className='display'>
-                <Gif />
+                <Gif image={this.state.gif}/>
                 <Quote diss={this.state.diss}/>
             </main>
         )
