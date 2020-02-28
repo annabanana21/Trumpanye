@@ -15,14 +15,14 @@ function Quote(props) {
 
 
     return (
-        <section className='display'>
+        <section className='display-cont'>
             <div className='display__bubble'>
                 <div className='display__icon'>
                     <p className='display__quote'>{props.diss}</p>
                 </div>
                 <div className='display__triangle'></div>
             </div>
-            <img src={trump} className='display__trump' onClick={playSound}/>
+            <div className='display__trump' onClick={playSound}></div>
             <audio id="audio" src={audio}></audio>
         </section>
     )
