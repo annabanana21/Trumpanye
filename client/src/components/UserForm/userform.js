@@ -8,7 +8,7 @@ function UserForm() {
             <form className='form__box' action="http://localhost:3000/diss">
                 <label htmlFor='username'>I have something to say about</label>
                 <input type='text' name='username' placeholder='Your Name' className='form__feild' required></input>
-                <button type='submit' className='form__button'>ENTER</button>
+                <button type='submit' className='form__button'></button>
             </form>
         </section>
     )
